@@ -13,7 +13,7 @@ app .use(express.json()) // covert data to json
 //     res.status(200).json({Intro:"This is my router."})
 // }) //create route
 
-app.use('/', productroute)
+app.use('/api', productroute)
 
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() =>{

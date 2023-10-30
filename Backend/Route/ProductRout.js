@@ -4,6 +4,6 @@ const {
     createProduct 
 } = require('../Controller/ProductController')
 
-router.post('/create', createProduct)
+router.post('/', createProduct)
 
 module.exports = router;
