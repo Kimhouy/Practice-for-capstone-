@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const postroute = require('./Router/PostRoute')
+const userRoute = require('./Router/UserRoute')
 
 const app = express()
 
@@ -13,7 +14,8 @@ app .use(express.json()) // convert data to json
 //     res.status(200).json({Intro:"Welcome to my routerX))"})
 // }) //create route 
 
-app.use('/api', postroute)
+app.use('/', postroute)
+app.use('/users', userRoute)
 
 
 mongoose.connect(process.env.DB, )

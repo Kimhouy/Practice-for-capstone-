@@ -8,11 +8,11 @@ const {
     updatePost
 } = require('../Controller/PostController')
 
-router.post('/', createPosts),
+router.post('/upload', createPosts),
 router.get('/posts', getPosts),
-router.get('/:id', getPost),
-router.delete(':/id', deletePost),
-router.patch('/:id', updatePost),
+router.get('/post:id', getPost),
+router.delete('delete:/id', deletePost),
+router.patch('/update:id', updatePost),
 
 
 module.exports = router;
